@@ -1,0 +1,7 @@
+{
+  "name": "fixture-vite-app",
+  "private": true,
+  "dependencies": {
+    "vite": "^5.4.0"
+  }
+}

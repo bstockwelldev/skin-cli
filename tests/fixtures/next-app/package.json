@@ -1,0 +1,9 @@
+{
+  "name": "fixture-next-app",
+  "private": true,
+  "dependencies": {
+    "@bstockwelldev/react-skin-system": "^0.1.1",
+    "@bstockwelldev/skin-pack-robco-terminal": "^0.1.0",
+    "next": "^15.0.0"
+  }
+}
