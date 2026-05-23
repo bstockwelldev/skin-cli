@@ -1,7 +1,7 @@
-# Linear open workstream — skin-cli
+# Linear open workstream ï¿½ skin-cli
 
 **Last updated:** 2026-05-22  
-**Issue:** [STO-141](https://linear.app/stockwise-productions-prototypes/issue/STO-141) — Add auth + idempotency tests for skin-cli package  
+**Issue:** [STO-141](https://linear.app/stockwise-productions-prototypes/issue/STO-141) ï¿½ Add auth + idempotency tests for skin-cli package  
 **Related:** [skin-cli#1](https://github.com/bstockwelldev/skin-cli/pull/1) (Step 3 CLI scaffold)
 
 ---
@@ -19,7 +19,7 @@ flowchart TD
 
   T1["? Auth: tokens never in stdout/logs/errors"]
   T2["? Invalid skin JSON fails fast"]
-  T3["? Idempotent re-run — no duplicate side effects"]
+  T3["? Idempotent re-run ï¿½ no duplicate side effects"]
   T4["? Permission gate on protected endpoints"]
 
   S141 --> T1

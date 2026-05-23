@@ -2,6 +2,7 @@ import { Command } from 'commander';
 
 import { runAddPack, runBootstrapNext, runInit, runVerify } from './commands.js';
 import { renderPreviewDiff, writeFileChanges } from './fs-utils.js';
+import { redactSecrets } from './redactSecrets.js';
 import type { CommandResult } from './types.js';
 
 const program = new Command();
@@ -65,7 +66,8 @@ program
   });
 
 program.parseAsync(process.argv).catch((error: unknown) => {
-  const message = error instanceof Error ? error.message : String(error);
+  const raw = error instanceof Error ? error.message : String(error);
+  const message = redactSecrets(raw);
   console.error(`skin-cli error: ${message}`);
   process.exitCode = 1;
 });

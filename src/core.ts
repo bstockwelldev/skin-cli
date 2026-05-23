@@ -48,7 +48,11 @@ async function hasAnyFile(cwd: string, files: string[]): Promise<boolean> {
 export async function readPackageJson(cwd: string): Promise<PackageJson> {
   const packageJsonPath = path.join(cwd, 'package.json');
   const contents = await readFile(packageJsonPath, 'utf8');
-  return JSON.parse(contents) as PackageJson;
+  try {
+    return JSON.parse(contents) as PackageJson;
+  } catch {
+    throw new Error(`Invalid JSON in package.json (${packageJsonPath})`);
+  }
 }
 
 export function toRegistryVarName(npmName: string): string {
